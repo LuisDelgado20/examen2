@@ -168,10 +168,10 @@
     var salesChart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
           label: 'Ventas',
-          data: datosGrafica,
+          data: [[${datosGrafica}]],
           fill: true,
           backgroundColor: 'rgba(23, 162, 184, 0.1)',
           borderColor: 'rgba(23, 162, 184, 1)',
@@ -189,7 +189,7 @@
           xAxes: [{ gridLines: { display: false } }],
           yAxes: [{
             gridLines: { display: true },
-            ticks: { beginAtZero: true, max: 100, stepSize: 10 }
+            ticks: { beginAtZero: true, max: 50000, stepSize: 10 }
           }]
         }
       }

@@ -26,8 +26,7 @@ public class CuentaController {
             return "redirect:/auth/login";
         }
 
-        // El Service ahora maneja internamente la lógica de la lista
-        // y nos devuelve una sola Cuenta (o null)
+
         Cuenta cuentaUsuario = cuentaService.buscarPorTitular(usuarioLogueado);
 
         if (cuentaUsuario != null) {

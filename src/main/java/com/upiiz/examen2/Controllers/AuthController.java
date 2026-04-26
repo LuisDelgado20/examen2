@@ -36,7 +36,7 @@ public class AuthController {
             Cuenta usuario = cuentaService.buscarPorEmail(email);
 
             session.setAttribute("usuarioLogueado", usuario.getTitular());
-            // CORRECCIÓN: Redirigir al dashboard en lugar de /cuentas
+
             return "redirect:/dashboard";
         } else {
             model.addAttribute("error", "Usuario o contraseña incorrectos");
